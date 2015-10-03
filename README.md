@@ -20,6 +20,9 @@ app.module('MainController', function($scope, ngHover)
     $scope.link.hover.text = '#FFFFFF';
     
     // Set up service with the value to be updated when mouse is over the link.
+    // - $scope: here the service will be using $watch to see when a value is modified.
+    // - 'linkNormalText': an unique identifier assigned to this value.
+    // - 'link.normal.text': value inside $scope as you would write for $watch.
     ngHover.set($scope, 'linkNormalText', 'link.normal.text');
     
     // Service will be used also in the view.
@@ -73,6 +76,6 @@ View:
 - Avoid multiple calls to in() and out() when several CSS properties are used.
  
 ### Bugs? Comments?
-Just tell me! I'm an AngularJS new user, coming from Javascript an jQuery. Any comments would be appreciated!
+Just tell me! I'm an new AngularJS user, coming from Javascript and jQuery. Any comments would be appreciated!
 
-Regards, Cristian.
+Regards, CJ Nimes.
