@@ -34,7 +34,7 @@ app.module('MainController', function($scope, ngHover)
 ##### 4) Use the service in a view in order to show updated colors.
 ```
 <div ng-controller="MainController">
-<a href="#" onclick="return false"
+<a href="#" 
    ng-style="{ 'color': hover.get('linkNormal') }" 
    ng-mouseenter="hover.in('linkNormal', link.hover)" 
    ng-mouseleave="hover.out('linkNormal', link.normal)">
