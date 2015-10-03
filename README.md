@@ -24,7 +24,7 @@ app.module('MainController', function($scope, ngHover)
 
 
 
-# 3) Probably, you have a colorpicker and the user can change colors.
+# 3) Probably, in your UI you have a colorpicker and the user can change colors.
 
 <some-nice-angular-colorpicker ng-model="link.normal"></some-nice-angular-colorpicker>
 <some-nice-angular-colorpicker ng-model="link.hover"></some-nice-angular-colorpicker>
