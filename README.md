@@ -73,6 +73,6 @@ View:
 - Avoid multiple calls to in() and out() when several CSS properties are used.
  
 ### Bugs? Comments?
-Just tell me! I'm an AngularJS new user, coming from Javascript an jQuery.
+Just tell me! I'm an AngularJS new user, coming from Javascript an jQuery. Any comments would be appreciated!
 
 Regards, Cristian ^_^
