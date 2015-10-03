@@ -18,7 +18,7 @@ app.module('MainController', function($scope, ngHover)
     $scope.link.normal = '#CCCCCC';
     $scope.link.hover = '#FFFFFF';
 
-    Hover.set($scope, 'linkNormal', 'link.normal');
+    ngHover.set($scope, 'linkNormal', 'link.normal');
     $scope.hover = ngHover;
 });
 
