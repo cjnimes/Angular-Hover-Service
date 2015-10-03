@@ -1,15 +1,15 @@
-# Angular Hover Service
+### Angular Hover Service
 
 An AngularJS service to handle colors of links when they are changed by the user (example, with a colorpicker).
 
 
-# 1) Include the file.
+#### 1) Include the file.
 
 <script src="ng-hover.js"></script>
 
 
 
-# 2) Use the service in a controller, and define some colors to be managed.
+#### 2) Use the service in a controller, and define some colors to be managed.
 
 var app = angular.module('app', ['ngHover']);
 
@@ -24,14 +24,14 @@ app.module('MainController', function($scope, ngHover)
 
 
 
-# 3) Probably, in your UI you have a colorpicker and the user can change colors.
+#### 3) Probably, in your UI you have a colorpicker and the user can change colors.
 
 <some-nice-angular-colorpicker ng-model="link.normal"></some-nice-angular-colorpicker>
 <some-nice-angular-colorpicker ng-model="link.hover"></some-nice-angular-colorpicker>
 
 
 
-# 4) Using the service in a view in order to show updated colors.
+#### 4) Use the service in a view in order to show updated colors.
 
 <div ng-controller="MainController">
 <a href="#" onclick="return false"
