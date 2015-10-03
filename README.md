@@ -67,3 +67,12 @@ View:
     A link with nice colors
 </a>
 ```
+
+## To do
+- Rewrite in() and out() functions to avoid the second argument. This value could be established when the service is configured.
+- Avoid multiple calls to in() and out() when several CSS properties are used.
+ 
+### Bugs? Comments?
+Just tell me! I'm an AngularJS new user, coming from Javascript an jQuery.
+
+Regards, Cristian ^_^
