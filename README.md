@@ -15,10 +15,14 @@ var app = angular.module('app', ['ngHover']);
 
 app.module('MainController', function($scope, ngHover)
 {
+    // These values could be coming from a remote database.
     $scope.link.normal.text = '#CCCCCC';
     $scope.link.hover.text = '#FFFFFF';
-
+    
+    // Set up service with the value to be updated when mouse is over the link.
     ngHover.set($scope, 'linkNormalText', 'link.normal.text');
+    
+    // Service will be used also in the view.
     $scope.hover = ngHover;
 });
 ```
@@ -31,7 +35,7 @@ app.module('MainController', function($scope, ngHover)
 ```
 
 
-##### 4) Use the service in a view in order to show updated colors.
+##### 4) Use the service in the view in order to show updated colors.
 ```
 <div ng-controller="MainController">
 <a href="#" 
