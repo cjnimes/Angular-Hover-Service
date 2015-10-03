@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>ngHover - Angular Hover Service by cjnimes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">ngHover - Angular Hover Service</h1>
+      <h2 class="project-tagline">A small service I made to handle color changes when mouse is hovering on links. The hover event can be a little tricky when colors are changed by the user...</h2>
+      <a href="https://github.com/cjnimes/Angular-Hover-Service" class="btn">View on GitHub</a>
+      <a href="https://github.com/cjnimes/Angular-Hover-Service/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/cjnimes/Angular-Hover-Service/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="angular-hover-service" class="anchor" href="#angular-hover-service" aria-hidden="true"><span class="octicon octicon-link"></span></a>Angular Hover Service</h1>
+
+<p>An AngularJS service to handle colors of links when they are changed by the user (example, with a colorpicker).</p>
+
+<h5>
+<a id="1-include-the-file" class="anchor" href="#1-include-the-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>1) Include the file.</h5>
+
+<pre><code>&lt;script src="ng-hover.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h5>
+<a id="2-use-the-service-in-a-controller-and-define-some-colors-to-be-managed" class="anchor" href="#2-use-the-service-in-a-controller-and-define-some-colors-to-be-managed" aria-hidden="true"><span class="octicon octicon-link"></span></a>2) Use the service in a controller, and define some colors to be managed.</h5>
+
+<pre><code>var app = angular.module('app', ['ngHover']);
+
+app.module('MainController', function($scope, ngHover)
+{
+    // These values could be coming from a remote database.
+    $scope.link.normal.text = '#CCCCCC';
+    $scope.link.hover.text = '#FFFFFF';
+
+    // Set up service with the value to be updated when mouse is over the link.
+    ngHover.set($scope, 'linkNormalText', 'link.normal.text');
+
+    // Service will be used also in the view.
+    $scope.hover = ngHover;
+});
+</code></pre>
+
+<h5>
+<a id="3-probably-in-your-ui-you-have-a-colorpicker-and-the-user-can-change-colors" class="anchor" href="#3-probably-in-your-ui-you-have-a-colorpicker-and-the-user-can-change-colors" aria-hidden="true"><span class="octicon octicon-link"></span></a>3) Probably, in your UI you have a colorpicker and the user can change colors.</h5>
+
+<pre><code>&lt;some-nice-angular-colorpicker ng-model="link.normal.text"&gt;&lt;/some-nice-angular-colorpicker&gt;
+&lt;some-nice-angular-colorpicker ng-model="link.hover.text"&gt;&lt;/some-nice-angular-colorpicker&gt;
+</code></pre>
+
+<h5>
+<a id="4-use-the-service-in-the-view-in-order-to-show-updated-colors" class="anchor" href="#4-use-the-service-in-the-view-in-order-to-show-updated-colors" aria-hidden="true"><span class="octicon octicon-link"></span></a>4) Use the service in the view in order to show updated colors.</h5>
+
+<pre><code>&lt;div ng-controller="MainController"&gt;
+&lt;a href="#" 
+   ng-style="{ 'color': hover.get('linkNormalText') }" 
+   ng-mouseenter="hover.in('linkNormalText', link.hover.text)" 
+   ng-mouseleave="hover.out('linkNormalText', link.normal.text)"&gt;
+    A link with nice colors
+&lt;/a&gt;
+&lt;div&gt;
+</code></pre>
+
+<h5>
+<a id="5-you-can-handle-any-css-property" class="anchor" href="#5-you-can-handle-any-css-property" aria-hidden="true"><span class="octicon octicon-link"></span></a>5) You can handle any CSS property:</h5>
+
+<p>Controller:</p>
+
+<pre><code>$scope.link.normal.background = '#FF0000';
+$scope.link.normal.border = '#00FF00';
+$scope.link.hover.background = '#0000FF';
+$scope.link.hover.border = '#FF00FF';
+
+ngHover.set($scope, 'linkNormalBackground', 'link.normal.background');
+ngHover.set($scope, 'linkNormalBorder', 'link.normal.border');
+</code></pre>
+
+<p>View:</p>
+
+<pre><code>&lt;a href="#" 
+   ng-style="{ 'color': hover.get('linkNormalText'), 'background-color': hover.get('linkNormalBackground'), 'border-color': hover.get('linkNormalBorder') }" 
+   ng-mouseenter="hover.in('linkNormalText', link.hover.text); hover.in('linkNormalBackground', link.hover.background); hover.in('linkNormalBorder', link.hover.border);" 
+   ng-mouseleave="hover.out('linkNormalText', link.normal.text), hover.out('linkNormalBackground', link.normal.background), hover.out('linkNormalBorder', link.normal.border)"&gt;
+    A link with nice colors
+&lt;/a&gt;
+</code></pre>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/cjnimes/Angular-Hover-Service">ngHover - Angular Hover Service</a> is maintained by <a href="https://github.com/cjnimes">cjnimes</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
