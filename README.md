@@ -1,4 +1,4 @@
-# Angular Hover Service
+# ngHover: Angular Hover Service
 
 An AngularJS service to handle colors of links when they are changed by the user (example, with a colorpicker).
 
@@ -75,4 +75,4 @@ View:
 ### Bugs? Comments?
 Just tell me! I'm an AngularJS new user, coming from Javascript an jQuery. Any comments would be appreciated!
 
-Regards, Cristian ^_^
+Regards, Cristian.
