@@ -12,7 +12,7 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">ngHover - Angular Hover Service</h1>
-      <h2 class="project-tagline">A small service I made to handle color changes when mouse is hovering on links. The hover event can be a little tricky when colors are changed by the user...</h2>
+      <h2 class="project-tagline">A small service I made to handle color changes when mouse is hovering on links.</h2>
       <a href="https://github.com/cjnimes/Angular-Hover-Service" class="btn">View on GitHub</a>
       <a href="https://github.com/cjnimes/Angular-Hover-Service/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/cjnimes/Angular-Hover-Service/tarball/master" class="btn">Download .tar.gz</a>
@@ -22,7 +22,7 @@
       <h1>
 <a id="angular-hover-service" class="anchor" href="#angular-hover-service" aria-hidden="true"><span class="octicon octicon-link"></span></a>Angular Hover Service</h1>
 
-<p>An AngularJS service to handle colors of links when they are changed by the user (example, with a colorpicker).</p>
+<p>An AngularJS service to handle colors of links when they are changed by the user (example, with a colorpicker). The hover event can be a little tricky!.</p>
 
 <h5>
 <a id="1-include-the-file" class="anchor" href="#1-include-the-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>1) Include the file.</h5>
@@ -92,6 +92,21 @@ ngHover.set($scope, 'linkNormalBorder', 'link.normal.border');
     A link with nice colors
 &lt;/a&gt;
 </code></pre>
+
+<h2>
+<a id="to-do" class="anchor" href="#to-do" aria-hidden="true"><span class="octicon octicon-link"></span></a>To do</h2>
+
+<ul>
+<li>Rewrite in() and out() functions to avoid the second argument. This value could be established when the service is configured.</li>
+<li>Avoid multiple calls to in() and out() when several CSS properties are used.</li>
+</ul>
+
+<h3>
+<a id="bugs-comments" class="anchor" href="#bugs-comments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bugs? Comments?</h3>
+
+<p>Just tell me! I'm an AngularJS new user, coming from Javascript an jQuery. Any comments would be appreciated!</p>
+
+<p>Regards, Cristian ^_^</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/cjnimes/Angular-Hover-Service">ngHover - Angular Hover Service</a> is maintained by <a href="https://github.com/cjnimes">cjnimes</a>.</span>
